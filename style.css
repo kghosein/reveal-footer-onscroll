@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+main, footer {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: bisque;
+    position: relative;
+    z-index: 1;
+    /* this margin bottom is the key thing, it is set dynamically from JS so you don't have to calculate footer height and apply margin bottom, it must be equivalent to footer height */
+    /* margin-bottom: 400px; */
+}
+
+main > div, footer > div {
+    font-size: 3rem;
+}
+
+footer {
+    max-height: 70vh;
+    background-color: darksalmon;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+}
